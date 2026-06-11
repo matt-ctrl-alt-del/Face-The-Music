@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dw2cf28xwvc21"]
+
+[ext_resource type="AudioStream" uid="uid://xd72xucuy6gx" path="res://audio/face_the_music_ost.mp3" id="1_lr66j"]
+[ext_resource type="AudioStream" uid="uid://bd0xa53q2pj4a" path="res://audio/face_the_music_underwaterost.mp3" id="2_khlsn"]
+[ext_resource type="AudioStream" uid="uid://clmerk6yufsue" path="res://audio/face_the_music_windyost.mp3" id="3_boywh"]
+[ext_resource type="AudioStream" uid="uid://1i4ehlyb7xhf" path="res://audio/face_the_music_natureost.mp3" id="4_gqg2j"]
+[ext_resource type="AudioStream" uid="uid://cdtvgorxf8epv" path="res://audio/face_the_music_titlescreen.mp3" id="5_wia2r"]
+
+[node name="Music" type="Node" unique_id=275784535]
+
+[node name="main_soundtrack" type="AudioStreamPlayer" parent="." unique_id=985465670]
+stream = ExtResource("1_lr66j")
+
+[node name="underwater_soundtrack" type="AudioStreamPlayer" parent="." unique_id=1344388007]
+stream = ExtResource("2_khlsn")
+
+[node name="windy_soundtracck" type="AudioStreamPlayer" parent="." unique_id=1677760195]
+stream = ExtResource("3_boywh")
+
+[node name="nature_soundtrack" type="AudioStreamPlayer" parent="." unique_id=1479673354]
+stream = ExtResource("4_gqg2j")
+
+[node name="title_soundtrack" type="AudioStreamPlayer" parent="." unique_id=1905600463]
+stream = ExtResource("5_wia2r")

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://btd8mw8eq22ct"]
+
+[ext_resource type="Texture2D" uid="uid://ibfnfkh35o31" path="res://map/Premade_o-ground.png" id="1_p7jwj"]
+[ext_resource type="Texture2D" uid="uid://bono3ai1x7ukh" path="res://map/Premade_j-cave_walls_perimeter.png" id="2_2m3eu"]
+[ext_resource type="Texture2D" uid="uid://cti7qrqmjidfc" path="res://map/Premade_c-stalactites.png" id="3_raiux"]
+[ext_resource type="Texture2D" uid="uid://b5g77o3yblqbb" path="res://map/Premade_Darkness_Effect.png" id="3_x0ugi"]
+[ext_resource type="Texture2D" uid="uid://cgl8eokkk2hdo" path="res://map/Premade_l-other_walls.png" id="4_5vo6v"]
+[ext_resource type="Texture2D" uid="uid://o5bwloc7s2y0" path="res://map/Premade_m-lakes.png" id="5_k348l"]
+[ext_resource type="Texture2D" uid="uid://t8rn6yq6jkgv" path="res://map/Premade_n-ruins_floor.png" id="6_srta2"]
+
+[node name="Map1" type="Node2D" unique_id=1695058088]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1945893192]
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground" unique_id=363028149]
+
+[node name="ground" type="Sprite2D" parent="ParallaxBackground/Parallax2D" unique_id=619069705]
+z_index = -1
+position = Vector2(575.5, 323)
+scale = Vector2(1.8212025, 1.7287234)
+texture = ExtResource("1_p7jwj")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBackground" unique_id=1821001256]
+
+[node name="walls" type="Sprite2D" parent="ParallaxBackground/Parallax2D2" unique_id=574516119]
+z_index = 1
+position = Vector2(577.50006, 324)
+scale = Vector2(1.8306962, 1.7287233)
+texture = ExtResource("2_2m3eu")
+
+[node name="Parallax2D3" type="Parallax2D" parent="ParallaxBackground" unique_id=1037503661]
+z_index = 1
+
+[node name="stalactites" type="Sprite2D" parent="ParallaxBackground/Parallax2D3" unique_id=946687320]
+position = Vector2(575, 324)
+scale = Vector2(1.8259493, 1.718085)
+texture = ExtResource("3_raiux")
+
+[node name="Parallax2D4" type="Parallax2D" parent="ParallaxBackground" unique_id=1317616104]
+
+[node name="other_walls" type="Sprite2D" parent="ParallaxBackground/Parallax2D4" unique_id=375065749]
+position = Vector2(575, 324)
+scale = Vector2(1.8259493, 1.718085)
+texture = ExtResource("4_5vo6v")
+
+[node name="Parallax2D5" type="Parallax2D" parent="ParallaxBackground" unique_id=1953858631]
+
+[node name="lakes" type="Sprite2D" parent="ParallaxBackground/Parallax2D5" unique_id=1969636975]
+position = Vector2(575, 324)
+scale = Vector2(1.8259493, 1.718085)
+texture = ExtResource("5_k348l")
+
+[node name="Parallax2D6" type="Parallax2D" parent="ParallaxBackground" unique_id=1360840433]
+visibility_layer = 3
+z_index = 1
+
+[node name="ruins" type="Sprite2D" parent="ParallaxBackground/Parallax2D6" unique_id=1458814508]
+z_index = 2
+position = Vector2(575, 324)
+scale = Vector2(1.8259493, 1.718085)
+texture = ExtResource("6_srta2")
+
+[node name="Parallax2D7" type="Parallax2D" parent="ParallaxBackground" unique_id=789745672]
+visibility_layer = 3
+z_index = 1
+
+[node name="shadows" type="Sprite2D" parent="ParallaxBackground/Parallax2D7" unique_id=1260869156]
+z_index = 9
+position = Vector2(575, 324)
+scale = Vector2(1.8259493, 1.718085)
+texture = ExtResource("3_x0ugi")
+
+[node name="Parallax2D8" type="Parallax2D" parent="ParallaxBackground" unique_id=1022714256]
+visibility_layer = 3
+z_index = 1
+
+[node name="Parallax2D9" type="Parallax2D" parent="ParallaxBackground" unique_id=2048082942]
+visibility_layer = 3
+z_index = 1
