@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o5bwloc7s2y0"
-path="res://.godot/imported/Premade_m-lakes.png-0c8d8106d65dac6e3b8d5c1d9affc959.ctex"
+uid="uid://dwnw6xqy25cwq"
+path="res://.godot/imported/Sprite-0004.png-d8dc6b5b7b288bf465216ea8e41ce401.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/Premade_m-lakes.png"
-dest_files=["res://.godot/imported/Premade_m-lakes.png-0c8d8106d65dac6e3b8d5c1d9affc959.ctex"]
+source_file="res://map/Sprite-0004.png"
+dest_files=["res://.godot/imported/Sprite-0004.png-d8dc6b5b7b288bf465216ea8e41ce401.ctex"]
 
 [params]
 

@@ -392,3 +392,4 @@ frame_progress = 0.2734018
 occluder = SubResource("OccluderPolygon2D_ha2mi")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1386157738]
+zoom = Vector2(3, 3)

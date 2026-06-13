@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t8rn6yq6jkgv"
-path="res://.godot/imported/Premade_n-ruins_floor.png-0eb746e822725973e0fa74292e276ec4.ctex"
+uid="uid://o436orwxsvyi"
+path="res://.godot/imported/prlxbg3.png-078fa9dca60e9fe62319fb66d7b79c7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/Premade_n-ruins_floor.png"
-dest_files=["res://.godot/imported/Premade_n-ruins_floor.png-0eb746e822725973e0fa74292e276ec4.ctex"]
+source_file="res://map/prlxbg/prlxbg3.png"
+dest_files=["res://.godot/imported/prlxbg3.png-078fa9dca60e9fe62319fb66d7b79c7e.ctex"]
 
 [params]
 

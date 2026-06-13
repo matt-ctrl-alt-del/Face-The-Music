@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://teracriilylb"
-path="res://.godot/imported/Premade.png-6803b96a1acc607f5b38d29a5e054778.ctex"
+uid="uid://dou5bdt33px5p"
+path="res://.godot/imported/prlxbg4.png-8cdf9b37690c9acdaca650644397de49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/Premade.png"
-dest_files=["res://.godot/imported/Premade.png-6803b96a1acc607f5b38d29a5e054778.ctex"]
+source_file="res://map/prlxbg/prlxbg4.png"
+dest_files=["res://.godot/imported/prlxbg4.png-8cdf9b37690c9acdaca650644397de49.ctex"]
 
 [params]
 

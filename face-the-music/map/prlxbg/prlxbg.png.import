@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by3g01edms7pe"
-path="res://.godot/imported/Premade_Shadows.png-c0c534803e903df9e97a3360d4ff63e1.ctex"
+uid="uid://ctiv06jawndct"
+path="res://.godot/imported/prlxbg.png-3812c8db7df6079ebfcb6f9dbf400a47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/Premade_Shadows.png"
-dest_files=["res://.godot/imported/Premade_Shadows.png-c0c534803e903df9e97a3360d4ff63e1.ctex"]
+source_file="res://map/prlxbg/prlxbg.png"
+dest_files=["res://.godot/imported/prlxbg.png-3812c8db7df6079ebfcb6f9dbf400a47.ctex"]
 
 [params]
 

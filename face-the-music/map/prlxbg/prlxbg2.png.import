@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgl8eokkk2hdo"
-path="res://.godot/imported/Premade_l-other_walls.png-9365030a26b350f0471ec29547857515.ctex"
+uid="uid://c6d2f15nnjqy4"
+path="res://.godot/imported/prlxbg2.png-70a27b29c8c10c439eefd3eb9bbe080a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/Premade_l-other_walls.png"
-dest_files=["res://.godot/imported/Premade_l-other_walls.png-9365030a26b350f0471ec29547857515.ctex"]
+source_file="res://map/prlxbg/prlxbg2.png"
+dest_files=["res://.godot/imported/prlxbg2.png-70a27b29c8c10c439eefd3eb9bbe080a.ctex"]
 
 [params]
 
