@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://c8rq26svdnl5a"]
+
+[ext_resource type="Script" uid="uid://bw1pojoe8sles" path="res://scripts/character_body_2d.gd" id="1_oxp5l"]
+[ext_resource type="Texture2D" uid="uid://cch61i7tj4rty" path="res://sprites/player/thewanderer_char1-sheet.png" id="2_cecpa"]
+
+[sub_resource type="Gradient" id="Gradient_qlg0r"]
+offsets = PackedFloat32Array(0.18028846, 0.70913464)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qlg0r"]
+gradient = SubResource("Gradient_qlg0r")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smehm"]
+radius = 4.0
+height = 13.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6mxy"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7s4y"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojone"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjb6e"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lccqv"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf4lf"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebar7"]
+atlas = ExtResource("2_cecpa")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxlsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6mxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7s4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojone")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjb6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lccqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf4lf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebar7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="wanderer_char" type="Node2D" unique_id=983047035]
+scale = Vector2(2, 2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2093653053]
+modulate = Color(0.5227242, 0.5227243, 0.5227242, 1)
+script = ExtResource("1_oxp5l")
+
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=1702088246]
+z_index = 4
+energy = 3.33
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 1.0
+texture = SubResource("GradientTexture2D_qlg0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=752054646]
+position = Vector2(2.5, 1)
+shape = SubResource("CapsuleShape2D_smehm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=771528978]
+light_mask = 3
+position = Vector2(3, 1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_lxlsd")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1386157738]
+zoom = Vector2(3, 3)

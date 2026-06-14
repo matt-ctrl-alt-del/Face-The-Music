@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://62syvdr3iqnt"
-path="res://.godot/imported/SkeletonIdle.png-67458091b3e83d8907bff209c61fafea.ctex"
+uid="uid://d2iwfelyo6bnt"
+path="res://.godot/imported/thelost.png-6e16718bd28344b3e47930289eac0fde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/SkeletonIdle.png"
-dest_files=["res://.godot/imported/SkeletonIdle.png-67458091b3e83d8907bff209c61fafea.ctex"]
+source_file="res://sprites/player/thelost.png"
+dest_files=["res://.godot/imported/thelost.png-6e16718bd28344b3e47930289eac0fde.ctex"]
 
 [params]
 

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dsy0w808bljxl"]
+
+[ext_resource type="AudioStream" uid="uid://1i4ehlyb7xhf" path="res://audio/face_the_music_natureost.mp3" id="1_3bmlt"]
+[ext_resource type="PackedScene" uid="uid://otf8676eamcd" path="res://scenes/map_2.tscn" id="1_jm1iu"]
+[ext_resource type="PackedScene" uid="uid://du44d4pcmxkfb" path="res://scenes/wanderer_char2.tscn" id="1_pbc48"]
+
+[node name="level2" type="Node2D" unique_id=935131382]
+
+[node name="wanderer_char" parent="." unique_id=983047035 instance=ExtResource("1_pbc48")]
+z_index = 2
+position = Vector2(58, 582)
+scale = Vector2(1.25, 1.25)
+
+[node name="map2" parent="." unique_id=1289248012 instance=ExtResource("1_jm1iu")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1488231657]
+stream = ExtResource("1_3bmlt")
+autoplay = true

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnm77bti3mfvs"
-path="res://.godot/imported/SkeletonAttack.png-eab4cb91235e5365d27e8c00e59f3911.ctex"
+uid="uid://dfv44cn3rc2bc"
+path="res://.godot/imported/latestsprite-sheet.png-6bb674e2b2a3dd24cabe5c4d7c32cc1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/SkeletonAttack.png"
-dest_files=["res://.godot/imported/SkeletonAttack.png-eab4cb91235e5365d27e8c00e59f3911.ctex"]
+source_file="res://latestsprite-sheet.png"
+dest_files=["res://.godot/imported/latestsprite-sheet.png-6bb674e2b2a3dd24cabe5c4d7c32cc1a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwa7puuhhdw6e"
-path="res://.godot/imported/SkeletonWalk.png-f2818f29f0505fea6a2aff46afe878fc.ctex"
+uid="uid://cch61i7tj4rty"
+path="res://.godot/imported/thewanderer_char1-sheet.png-16d314bd541f5f3179d0f5967526dcd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/SkeletonWalk.png"
-dest_files=["res://.godot/imported/SkeletonWalk.png-f2818f29f0505fea6a2aff46afe878fc.ctex"]
+source_file="res://sprites/player/thewanderer_char1-sheet.png"
+dest_files=["res://.godot/imported/thewanderer_char1-sheet.png-16d314bd541f5f3179d0f5967526dcd8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv8w0e0ddhnxw"
-path="res://.godot/imported/SkeletonDie.png-035b03e40352952f46e0c8880f2186e0.ctex"
+uid="uid://chkbx62xa288q"
+path="res://.godot/imported/thewanderer.png-fab0096eddb4c1ba975fd3ebadf66c73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/SkeletonDie.png"
-dest_files=["res://.godot/imported/SkeletonDie.png-035b03e40352952f46e0c8880f2186e0.ctex"]
+source_file="res://sprites/player/thewanderer.png"
+dest_files=["res://.godot/imported/thewanderer.png-fab0096eddb4c1ba975fd3ebadf66c73.ctex"]
 
 [params]
 
