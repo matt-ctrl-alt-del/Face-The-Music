@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bgqxpbbmrkau1"]
+
+[ext_resource type="Script" uid="uid://b87dlnv1cw565" path="res://scripts/mobile_controls.gd" id="1_puaky"]
+[ext_resource type="Texture2D" uid="uid://d0ey5uvuy5fbs" path="res://sprites/joystick/up.png" id="1_y1te1"]
+[ext_resource type="Texture2D" uid="uid://dgedfkarg3ab7" path="res://sprites/joystick/down.png" id="2_puaky"]
+[ext_resource type="Texture2D" uid="uid://h2icjo6otb36" path="res://sprites/joystick/left.png" id="3_yr8f1"]
+[ext_resource type="Texture2D" uid="uid://cnh7oyjrw2qj0" path="res://sprites/joystick/right.png" id="4_0g8qj"]
+[ext_resource type="Texture2D" uid="uid://dakch5d65xjku" path="res://sprites/joystick/jump.png" id="5_kth8y"]
+
+[node name="Mobile_Controls" type="CanvasLayer" unique_id=177007620]
+script = ExtResource("1_puaky")
+
+[node name="up" type="TouchScreenButton" parent="." unique_id=458383494]
+modulate = Color(1, 1, 1, 0.4117647)
+position = Vector2(157, 409)
+texture_normal = ExtResource("1_y1te1")
+action = "up"
+
+[node name="down" type="TouchScreenButton" parent="." unique_id=732234255]
+modulate = Color(1, 1, 1, 0.4117647)
+position = Vector2(157, 539)
+texture_normal = ExtResource("2_puaky")
+action = "down"
+
+[node name="left" type="TouchScreenButton" parent="." unique_id=301218204]
+modulate = Color(1, 1, 1, 0.4117647)
+position = Vector2(103, 474)
+texture_normal = ExtResource("3_yr8f1")
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="." unique_id=1773802143]
+modulate = Color(1, 1, 1, 0.4117647)
+position = Vector2(215, 474)
+texture_normal = ExtResource("4_0g8qj")
+action = "right"
+
+[node name="jump" type="TouchScreenButton" parent="." unique_id=542979980]
+modulate = Color(1, 1, 1, 0.42745098)
+position = Vector2(925, 488)
+texture_normal = ExtResource("5_kth8y")
+action = "jump"
