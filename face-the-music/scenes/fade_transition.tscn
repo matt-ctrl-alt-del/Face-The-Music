@@ -53,10 +53,10 @@ _data = {
 }
 
 [node name="ColorRect" type="ColorRect" unique_id=351551417]
-offset_left = -22.0
-offset_top = -25.0
-offset_right = 1171.0
-offset_bottom = 667.0
+offset_left = -439.0
+offset_top = -233.0
+offset_right = 1814.0
+offset_bottom = 938.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=92810701]
