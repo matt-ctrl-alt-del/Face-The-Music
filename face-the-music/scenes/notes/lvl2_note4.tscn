@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://b5c6r1kaig6iq"]
+
+[ext_resource type="Script" uid="uid://b5sbhw5s0w5gf" path="res://scripts/lvl_2_note_4.gd" id="1_fjywq"]
+[ext_resource type="Texture2D" uid="uid://cb2xvaa4cmn1l" path="res://sprites/notes/Sprite-0007.png" id="2_fcowl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmi4t"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8x1t"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_241wd"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa6p0"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coqfn"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3we6t"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8kku"]
+atlas = ExtResource("2_fcowl")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ii7fa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rmi4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8x1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_241wd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa6p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coqfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3we6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8kku")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uy50o"]
+radius = 8.0
+height = 16.0
+
+[node name="Note4" type="Area2D" unique_id=378037491]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_fjywq")
+
+[node name="Note4" type="AnimatedSprite2D" parent="." unique_id=801501404]
+sprite_frames = SubResource("SpriteFrames_ii7fa")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1571121555]
+shape = SubResource("CapsuleShape2D_uy50o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

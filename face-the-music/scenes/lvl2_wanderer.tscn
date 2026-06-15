@@ -79,6 +79,8 @@ scale = Vector2(2, 2)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2093653053]
 modulate = Color(0.5227242, 0.5227243, 0.5227242, 1)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_e6u4j")
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=1702088246]

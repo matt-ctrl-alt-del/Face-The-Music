@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ork8r0vc20nw" path="res://scenes/fade_transition.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://dnpd62h8262fi" path="res://scenes/notes/note1.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://bkum8vyqouc5r" path="res://scenes/notes/note2.tscn" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://bntucfi8nxa1" path="res://scenes/notes/note3.tscn" id="8_15mv3"]
+[ext_resource type="PackedScene" uid="uid://chom08r0fvmpx" path="res://scenes/notes/note4.tscn" id="9_e3sih"]
 
 [sub_resource type="GDScript" id="GDScript_5xbjy"]
 script/source = "extends Node2D
@@ -16,7 +18,7 @@ script/source = "extends Node2D
 func _ready() -> void:
 	$Fade_transition/AnimationPlayer.play(\"fade_out\")
 	await $Fade_transition/AnimationPlayer.animation_finished
-	$Fade_transition.queue_free()
+	$Fade_transition.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,6 +26,9 @@ func _process(delta: float) -> void:
 
 
 func _on_exit_body_entered(body: Node2D) -> void:
+	$Fade_transition.show()
+	$Fade_transition/AnimationPlayer.play(\"fade_in\")
+	await $Fade_transition/AnimationPlayer.animation_finished
 	get_tree().change_scene_to_file(\"res://scenes/level_2.tscn\")
 "
 
@@ -125,7 +130,7 @@ script = SubResource("GDScript_5xbjy")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=808839926]
 modulate = Color(0.5227242, 0.5227243, 0.5227242, 1)
-position = Vector2(55, 411)
+position = Vector2(4, 606)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_15mv3")
@@ -172,24 +177,6 @@ energy = 3.21
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_fcfvj")
 
-[node name="Light3" type="PointLight2D" parent="lighting" unique_id=1421084924]
-position = Vector2(39, 194)
-energy = 4.94
-range_layer_min = -110
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 2.3
-texture = SubResource("GradientTexture2D_pa8r4")
-
-[node name="Light4" type="PointLight2D" parent="lighting" unique_id=186250285]
-position = Vector2(727, 115)
-energy = 4.94
-range_layer_min = -110
-shadow_enabled = true
-shadow_filter = 2
-shadow_filter_smooth = 2.3
-texture = SubResource("GradientTexture2D_pa8r4")
-
 [node name="Light5" type="PointLight2D" parent="lighting" unique_id=165017279]
 position = Vector2(1144, 76)
 energy = 4.94
@@ -209,14 +196,14 @@ shadow_filter_smooth = 2.3
 texture = SubResource("GradientTexture2D_pa8r4")
 
 [node name="Fade_transition" parent="." unique_id=351551417 instance=ExtResource("5_4nkto")]
-visible = false
+z_index = 1
 
 [node name="Notes" type="Node" parent="." unique_id=245330427]
 
-[node name="note1" parent="Notes" unique_id=1688668173 instance=ExtResource("6_fcfvj")]
+[node name="Note1" parent="Notes" unique_id=1688668173 instance=ExtResource("6_fcfvj")]
 position = Vector2(441, 595)
 
-[node name="Light" type="PointLight2D" parent="Notes/note1" unique_id=896698345]
+[node name="Light" type="PointLight2D" parent="Notes/Note1" unique_id=896698345]
 position = Vector2(0, 4)
 energy = 4.94
 range_layer_min = -110
@@ -225,11 +212,35 @@ shadow_filter = 2
 shadow_filter_smooth = 2.3
 texture = SubResource("GradientTexture2D_pa8r4")
 
-[node name="Note1" parent="Notes" unique_id=378037491 instance=ExtResource("7_pa8r4")]
+[node name="Note2" parent="Notes" unique_id=378037491 instance=ExtResource("7_pa8r4")]
 position = Vector2(24, 403)
 
-[node name="Light2" type="PointLight2D" parent="Notes/Note1" unique_id=326400845]
+[node name="Light2" type="PointLight2D" parent="Notes/Note2" unique_id=326400845]
 position = Vector2(-1, 3)
+energy = 2.91
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_pa8r4")
+
+[node name="Note3" parent="Notes" unique_id=1087499771 instance=ExtResource("8_15mv3")]
+position = Vector2(40, 195)
+
+[node name="Light3" type="PointLight2D" parent="Notes/Note3" unique_id=1421084924]
+position = Vector2(-1, -1)
+energy = 4.94
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_pa8r4")
+
+[node name="Note4" parent="Notes" unique_id=2060312889 instance=ExtResource("9_e3sih")]
+position = Vector2(727, 116)
+
+[node name="Light4" type="PointLight2D" parent="Notes/Note4" unique_id=186250285]
+position = Vector2(0, -1)
 energy = 4.94
 range_layer_min = -110
 shadow_enabled = true

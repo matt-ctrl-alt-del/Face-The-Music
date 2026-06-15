@@ -1,42 +1,42 @@
-[gd_scene format=3 uid="uid://bkum8vyqouc5r"]
+[gd_scene format=3 uid="uid://dpgcr36xep2je"]
 
-[ext_resource type="Script" uid="uid://bbxglgqqmv261" path="res://scripts/note_2.gd" id="1_nicio"]
-[ext_resource type="Texture2D" uid="uid://r560rfu53ghb" path="res://sprites/notes/Sprite-0005.png" id="2_nicio"]
+[ext_resource type="Script" uid="uid://dg5cxex7md88o" path="res://scripts/lvl_2_note_2.gd" id="1_6m13j"]
+[ext_resource type="Texture2D" uid="uid://r560rfu53ghb" path="res://sprites/notes/Sprite-0005.png" id="2_2rhwi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n00fy"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jokq0"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_404ig"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ph27c"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wln4d"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjxju"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uk8a5"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjtcm"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5syya"]
-atlas = ExtResource("2_nicio")
+atlas = ExtResource("2_2rhwi")
 region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ktp3i"]
@@ -81,7 +81,7 @@ height = 16.0
 [node name="Note2" type="Area2D" unique_id=378037491]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("1_nicio")
+script = ExtResource("1_6m13j")
 
 [node name="Note2" type="AnimatedSprite2D" parent="." unique_id=801501404]
 sprite_frames = SubResource("SpriteFrames_ktp3i")

@@ -1,25 +1,19 @@
-extends Control
+extends Node2D
 
-
-var button_type = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Fade_transition/AnimationPlayer.play("fade_out")
+	await $Fade_transition/AnimationPlayer.animation_finished
+	$Fade_transition.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func _on_start_pressed() -> void:
-	button_type = "start"
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	$Fade_transition.show()
 	$Fade_transition/AnimationPlayer.play("fade_in")
 	await $Fade_transition/AnimationPlayer.animation_finished
-	if button_type == "start" :
-		get_tree().change_scene_to_file("res://scenes/level_1.tscn")
-		
-
-
-func _on_quit_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
