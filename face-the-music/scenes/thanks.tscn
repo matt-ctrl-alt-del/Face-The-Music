@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://t17map0dx63d"]
+
+[ext_resource type="Script" uid="uid://bhgm7y5s0qd7x" path="res://scripts/thanks.gd" id="1_hpeai"]
+[ext_resource type="Texture2D" uid="uid://dw0a77ccw0nyt" path="res://sprites/buttons/start_black.png" id="2_nmttw"]
+[ext_resource type="Texture2D" uid="uid://dbfdm8m5tu8h7" path="res://sprites/buttons/start_white.png" id="3_23e3t"]
+[ext_resource type="Texture2D" uid="uid://c2mfeeag0hpyy" path="res://sprites/buttons/quit_black.png" id="4_ui04m"]
+[ext_resource type="Texture2D" uid="uid://bnl5nea2ph0bd" path="res://sprites/buttons/quit_white.png" id="5_id62x"]
+[ext_resource type="Texture2D" uid="uid://bm2cpnpl7roe2" path="res://sprites/thanks.png" id="6_hpeai"]
+[ext_resource type="PackedScene" uid="uid://ork8r0vc20nw" path="res://scenes/fade_transition.tscn" id="7_i5q1u"]
+[ext_resource type="AudioStream" uid="uid://xd72xucuy6gx" path="res://audio/face_the_music_ost.mp3" id="8_jx4ct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmttw"]
+atlas = ExtResource("6_hpeai")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23e3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmttw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main Menu" type="Control" unique_id=1330186349]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = -2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hpeai")
+
+[node name="Button Manager" type="Control" parent="." unique_id=1713226975]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="TextureButton" parent="Button Manager" unique_id=712985780]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 490.0
+offset_right = 1114.0
+offset_bottom = 532.0
+texture_normal = ExtResource("2_nmttw")
+texture_pressed = ExtResource("3_23e3t")
+
+[node name="Quit" type="TextureButton" parent="Button Manager" unique_id=1080975658]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 549.0
+offset_right = 1114.0
+offset_bottom = 591.0
+texture_normal = ExtResource("4_ui04m")
+texture_pressed = ExtResource("5_id62x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button Manager" unique_id=1318373282]
+modulate = Color(0.8776157, 0.8776158, 0.8776157, 1)
+z_index = -1
+position = Vector2(578, 328)
+sprite_frames = SubResource("SpriteFrames_23e3t")
+autoplay = "default"
+
+[node name="Fade_transition" parent="." unique_id=351551417 instance=ExtResource("7_i5q1u")]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1683388303]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=496948527]
+stream = ExtResource("8_jx4ct")
+autoplay = true
+
+[connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button Manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

@@ -48,7 +48,7 @@ script = ExtResource("1_b4j7a")
 
 [node name="wanderer" parent="." unique_id=983047035 instance=ExtResource("1_pbc48")]
 z_index = 5
-position = Vector2(475, 90)
+position = Vector2(4, 678)
 scale = Vector2(1.1, 1.1)
 
 [node name="map2" parent="." unique_id=1289248012 instance=ExtResource("1_jm1iu")]
