@@ -9,15 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://ork8r0vc20nw" path="res://scenes/fade_transition.tscn" id="7_i5q1u"]
 [ext_resource type="AudioStream" uid="uid://xd72xucuy6gx" path="res://audio/face_the_music_ost.mp3" id="8_jx4ct"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmttw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpeai"]
 atlas = ExtResource("6_hpeai")
 region = Rect2(0, 0, 1152, 648)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_23e3t"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmttw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nmttw")
+"texture": SubResource("AtlasTexture_hpeai")
 }],
 "loop": true,
 "name": &"default",
@@ -48,19 +48,19 @@ grow_vertical = 2
 
 [node name="Start" type="TextureButton" parent="Button Manager" unique_id=712985780]
 layout_mode = 0
-offset_left = 942.0
-offset_top = 490.0
-offset_right = 1114.0
-offset_bottom = 532.0
+offset_left = 919.0
+offset_top = 348.0
+offset_right = 1091.0
+offset_bottom = 390.0
 texture_normal = ExtResource("2_nmttw")
 texture_pressed = ExtResource("3_23e3t")
 
 [node name="Quit" type="TextureButton" parent="Button Manager" unique_id=1080975658]
 layout_mode = 0
-offset_left = 942.0
-offset_top = 549.0
-offset_right = 1114.0
-offset_bottom = 591.0
+offset_left = 919.0
+offset_top = 407.0
+offset_right = 1091.0
+offset_bottom = 449.0
 texture_normal = ExtResource("4_ui04m")
 texture_pressed = ExtResource("5_id62x")
 
@@ -68,7 +68,7 @@ texture_pressed = ExtResource("5_id62x")
 modulate = Color(0.8776157, 0.8776158, 0.8776157, 1)
 z_index = -1
 position = Vector2(578, 328)
-sprite_frames = SubResource("SpriteFrames_23e3t")
+sprite_frames = SubResource("SpriteFrames_nmttw")
 autoplay = "default"
 
 [node name="Fade_transition" parent="." unique_id=351551417 instance=ExtResource("7_i5q1u")]
