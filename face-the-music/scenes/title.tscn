@@ -111,19 +111,19 @@ grow_vertical = 2
 
 [node name="Start" type="TextureButton" parent="Button Manager" unique_id=712985780]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 389.0
-offset_right = 629.0
-offset_bottom = 431.0
+offset_left = 435.0
+offset_top = 340.0
+offset_right = 607.0
+offset_bottom = 382.0
 texture_normal = ExtResource("2_b3w7a")
 texture_pressed = ExtResource("3_4rr2b")
 
 [node name="Quit" type="TextureButton" parent="Button Manager" unique_id=1080975658]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 448.0
-offset_right = 629.0
-offset_bottom = 490.0
+offset_left = 435.0
+offset_top = 399.0
+offset_right = 607.0
+offset_bottom = 441.0
 texture_normal = ExtResource("4_yql1r")
 texture_pressed = ExtResource("5_ia1n6")
 
