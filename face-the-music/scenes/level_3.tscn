@@ -1,24 +1,306 @@
 [gd_scene format=3 uid="uid://ddo77v47mm7h8"]
 
 [ext_resource type="PackedScene" uid="uid://byaowe8don3rc" path="res://scenes/map_3.tscn" id="1_70nk6"]
+[ext_resource type="Script" uid="uid://bo4k5urrx2qq2" path="res://scripts/level_3.gd" id="1_ah8om"]
 [ext_resource type="PackedScene" uid="uid://i73yrcey87ip" path="res://scenes/wanderer_pixel.tscn" id="1_uwxec"]
 [ext_resource type="PackedScene" uid="uid://fiae1awwb5ec" path="res://scenes/lost_pixel.tscn" id="2_1pn4d"]
 [ext_resource type="AudioStream" uid="uid://cdtvgorxf8epv" path="res://audio/face_the_music_titlescreen.mp3" id="2_h23n6"]
+[ext_resource type="PackedScene" uid="uid://ork8r0vc20nw" path="res://scenes/fade_transition.tscn" id="6_p6vls"]
+[ext_resource type="PackedScene" uid="uid://dg2pqrsgf26mp" path="res://scenes/notes/lvl3_note1.tscn" id="7_hhfj6"]
+[ext_resource type="PackedScene" uid="uid://byfeglen4mb7v" path="res://scenes/notes/lvl3_note2.tscn" id="8_vcx5n"]
+[ext_resource type="PackedScene" uid="uid://b5jbixa6eqhld" path="res://scenes/notes/lvl3_note3.tscn" id="9_56dhn"]
+[ext_resource type="PackedScene" uid="uid://1rpt0ml1jj71" path="res://scenes/notes/lvl3_note4.tscn" id="10_ax3dk"]
+
+[sub_resource type="Gradient" id="Gradient_fcfvj"]
+offsets = PackedFloat32Array(0, 0.31971154, 0.6706731)
+colors = PackedColorArray(1, 1, 1, 1, 0.4157706, 0.4157706, 0.4157706, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wae8j"]
+gradient = SubResource("Gradient_fcfvj")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah8om"]
+size = Vector2(12, 13)
+
+[sub_resource type="Gradient" id="Gradient_wo48x"]
+offsets = PackedFloat32Array(0, 0.86778843)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ha73p"]
+gradient = SubResource("Gradient_wo48x")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+repeat = 2
 
 [node name="level_3" type="Node2D" unique_id=163308025]
+script = ExtResource("1_ah8om")
 
-[node name="wanderer_pixel" parent="." unique_id=696254417 instance=ExtResource("1_uwxec")]
+[node name="wanderer_pixel" parent="." unique_id=696254417 groups=["player"] instance=ExtResource("1_uwxec")]
 z_index = 5
-position = Vector2(104.00001, 629)
+position = Vector2(120, 633)
 scale = Vector2(0.7, 0.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="lost_pixel" parent="." unique_id=1695115047 instance=ExtResource("2_1pn4d")]
 z_index = 5
-position = Vector2(86, 632.00006)
+position = Vector2(23, 616)
 scale = Vector2(0.8, 0.8)
+
+[node name="Light" type="PointLight2D" parent="lost_pixel" unique_id=19944715]
+z_index = 7
+position = Vector2(1.2500005, -1.2500296)
+color = Color(0.65356296, 2.6351586e-06, 6.256998e-07, 1)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
 
 [node name="Map 3" parent="." unique_id=779911339 instance=ExtResource("1_70nk6")]
 
 [node name="party_ost" type="AudioStreamPlayer" parent="." unique_id=1208197005]
 stream = ExtResource("2_h23n6")
 autoplay = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=668020689]
+position = Vector2(551, -8)
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1332012738]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_ah8om")
+
+[node name="Fade_transition" parent="." unique_id=351551417 instance=ExtResource("6_p6vls")]
+z_index = 1
+
+[node name="Lighting" type="Node" parent="." unique_id=1331458743]
+
+[node name="Light3" type="PointLight2D" parent="Lighting" unique_id=2042133961]
+z_index = 7
+position = Vector2(551, -5)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
+
+[node name="Light6" type="PointLight2D" parent="Lighting" unique_id=1065200250]
+z_index = 7
+position = Vector2(120, 637)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
+
+[node name="Strobe_Light" type="Node" parent="Lighting" unique_id=214427256]
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1425346499]
+position = Vector2(336, 510)
+color = Color(0.89579636, 0, 0.40062714, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1826058157]
+position = Vector2(408, 545)
+color = Color(0.50386024, 0.36633497, 0.9196965, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1934844165]
+position = Vector2(179, 529)
+color = Color(0, 0.5768258, 0.43235165, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D5" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=2068067520]
+position = Vector2(220, 382)
+color = Color(0.41711432, 0.5426643, 0.07375025, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D6" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1134394880]
+position = Vector2(551, 413)
+color = Color(0.531239, 0.5042943, 1.92523e-07, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D7" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=988850101]
+position = Vector2(157, 205)
+color = Color(0.6460225, 0.4464957, 1.92523e-07, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D8" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1280617016]
+position = Vector2(645, 130)
+color = Color(0.8490202, 0.2468217, 1.92523e-07, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D9" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1722303293]
+position = Vector2(986, 98)
+color = Color(0.9118336, 0, 0.21098685, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D10" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=402949551]
+position = Vector2(376, 212)
+color = Color(0.7985085, 0.00040275813, 0.7775192, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D11" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=195061889]
+position = Vector2(751, 441)
+color = Color(0.57478315, 0.26598904, 0.9948619, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D12" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1628825894]
+position = Vector2(1110, 320)
+color = Color(0.13647166, 0.44326913, 1, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D13" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=53524795]
+position = Vector2(498, 87)
+color = Color(0.21517256, 0.43208858, 1, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D14" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=139485137]
+position = Vector2(250, 56)
+color = Color(4.5242905e-06, 0.53284603, 0.72443664, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D15" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1784945027]
+position = Vector2(495, 320)
+color = Color(3.0322374e-06, 0.56133705, 0.56189626, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D16" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=406011207]
+position = Vector2(985, 447)
+color = Color(0, 0.56861454, 0.50686264, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="PointLight2D17" type="PointLight2D" parent="Lighting/Strobe_Light" unique_id=1748587984]
+position = Vector2(737, 223)
+color = Color(0.013942757, 0.59587103, 3.85046e-07, 0.4745098)
+energy = 6.25
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 6.1
+texture = SubResource("GradientTexture2D_ha73p")
+
+[node name="Notes" type="Node" parent="." unique_id=422365122]
+
+[node name="Note1" parent="Notes" unique_id=378037491 instance=ExtResource("7_hhfj6")]
+z_index = 2
+position = Vector2(312, 310)
+
+[node name="Light" type="PointLight2D" parent="Notes/Note1" unique_id=1489219472]
+z_index = 7
+position = Vector2(5, 8)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
+
+[node name="Note2" parent="Notes" unique_id=439182894 instance=ExtResource("8_vcx5n")]
+z_index = 2
+position = Vector2(840, 326)
+
+[node name="Light2" type="PointLight2D" parent="Notes/Note2" unique_id=1380341444]
+z_index = 7
+position = Vector2(1, 2)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
+
+[node name="Note3" parent="Notes" unique_id=609939282 instance=ExtResource("9_56dhn")]
+z_index = 2
+position = Vector2(1144, 134)
+
+[node name="Light4" type="PointLight2D" parent="Notes/Note3" unique_id=841285693]
+z_index = 7
+position = Vector2(-5, 1)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
+
+[node name="Note4" parent="Notes" unique_id=1971116571 instance=ExtResource("10_ax3dk")]
+z_index = 2
+position = Vector2(1143, 614)
+
+[node name="Light5" type="PointLight2D" parent="Notes/Note4" unique_id=1445594192]
+z_index = 7
+position = Vector2(1, 4)
+energy = 16.0
+range_layer_min = -110
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 2.3
+texture = SubResource("GradientTexture2D_wae8j")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
