@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://byaowe8don3rc"]
+[gd_scene format=3 uid="uid://ddo77v47mm7h8"]
 
-[node name="level 3" type="Node2D" unique_id=779911339]
+[ext_resource type="PackedScene" uid="uid://byaowe8don3rc" path="res://scenes/map_3.tscn" id="1_70nk6"]
+[ext_resource type="PackedScene" uid="uid://i73yrcey87ip" path="res://scenes/wanderer_pixel.tscn" id="1_uwxec"]
+[ext_resource type="PackedScene" uid="uid://fiae1awwb5ec" path="res://scenes/lost_pixel.tscn" id="2_1pn4d"]
+[ext_resource type="AudioStream" uid="uid://cdtvgorxf8epv" path="res://audio/face_the_music_titlescreen.mp3" id="2_h23n6"]
+
+[node name="level_3" type="Node2D" unique_id=163308025]
+
+[node name="wanderer_pixel" parent="." unique_id=696254417 instance=ExtResource("1_uwxec")]
+z_index = 5
+position = Vector2(104.00001, 629)
+scale = Vector2(0.7, 0.7)
+
+[node name="lost_pixel" parent="." unique_id=1695115047 instance=ExtResource("2_1pn4d")]
+z_index = 5
+position = Vector2(86, 632.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="Map 3" parent="." unique_id=779911339 instance=ExtResource("1_70nk6")]
+
+[node name="party_ost" type="AudioStreamPlayer" parent="." unique_id=1208197005]
+stream = ExtResource("2_h23n6")
+autoplay = true

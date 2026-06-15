@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://du44d4pcmxkfb"]
 
-[ext_resource type="Script" uid="uid://bw1pojoe8sles" path="res://scripts/character_body_2d.gd" id="1_mjq1j"]
+[ext_resource type="Script" uid="uid://bw1pojoe8sles" path="res://scripts/wanderer_full.gd" id="1_mjq1j"]
 [ext_resource type="Texture2D" uid="uid://cch61i7tj4rty" path="res://sprites/player/thewanderer_char1-sheet.png" id="2_rg3c2"]
 
 [sub_resource type="Gradient" id="Gradient_t7ghc"]

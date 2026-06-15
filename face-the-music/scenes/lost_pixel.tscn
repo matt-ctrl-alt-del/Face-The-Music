@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://fiae1awwb5ec"]
+
+[ext_resource type="Texture2D" uid="uid://d2iwfelyo6bnt" path="res://sprites/player/thelost.png" id="1_ljrpx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljrpx"]
+size = Vector2(16, 16)
+
+[node name="lost_pixel" type="Node2D" unique_id=1695115047]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=685268086]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=974857440]
+texture = ExtResource("1_ljrpx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2068550735]
+shape = SubResource("RectangleShape2D_ljrpx")

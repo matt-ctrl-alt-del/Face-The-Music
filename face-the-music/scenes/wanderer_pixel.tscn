@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://i73yrcey87ip"]
 
+[ext_resource type="Script" uid="uid://dd2cwpc1umtq4" path="res://scripts/wanderer_pixel.gd" id="1_25n84"]
+[ext_resource type="Texture2D" uid="uid://chkbx62xa288q" path="res://sprites/player/thewanderer.png" id="2_d0uro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25n84"]
+size = Vector2(16, 16)
+
 [node name="wanderer_pixel" type="Node2D" unique_id=696254417]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1145689391]
+script = ExtResource("1_25n84")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=668435590]
+texture = ExtResource("2_d0uro")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1717317308]
+zoom = Vector2(4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1689663135]
+shape = SubResource("RectangleShape2D_25n84")

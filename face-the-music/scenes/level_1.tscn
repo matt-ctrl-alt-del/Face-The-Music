@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lh4urtu0r3c4"]
 
-[ext_resource type="Script" uid="uid://bw1pojoe8sles" path="res://scripts/character_body_2d.gd" id="1_15mv3"]
+[ext_resource type="Script" uid="uid://bw1pojoe8sles" path="res://scripts/wanderer_full.gd" id="1_15mv3"]
 [ext_resource type="Texture2D" uid="uid://cch61i7tj4rty" path="res://sprites/player/thewanderer_char1-sheet.png" id="2_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://btd8mw8eq22ct" path="res://scenes/map1.tscn" id="2_rus8k"]
 [ext_resource type="AudioStream" uid="uid://clmerk6yufsue" path="res://audio/face_the_music_windyost.mp3" id="3_rus8k"]
@@ -114,7 +114,7 @@ script = SubResource("GDScript_5xbjy")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=808839926]
 modulate = Color(0.5227242, 0.5227243, 0.5227242, 1)
-position = Vector2(5, 571)
+position = Vector2(89, 348)
 script = ExtResource("1_15mv3")
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=924627692]

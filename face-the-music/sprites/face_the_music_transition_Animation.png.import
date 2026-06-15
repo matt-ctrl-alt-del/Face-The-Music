@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfv44cn3rc2bc"
-path="res://.godot/imported/latestsprite-sheet.png-6bb674e2b2a3dd24cabe5c4d7c32cc1a.ctex"
+uid="uid://b0lt2pupoa5cn"
+path="res://.godot/imported/face_the_music_transition_Animation.png-dbf998a57564b15a556f5ba0cc472e27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://latestsprite-sheet.png"
-dest_files=["res://.godot/imported/latestsprite-sheet.png-6bb674e2b2a3dd24cabe5c4d7c32cc1a.ctex"]
+source_file="res://sprites/face_the_music_transition_Animation.png"
+dest_files=["res://.godot/imported/face_the_music_transition_Animation.png-dbf998a57564b15a556f5ba0cc472e27.ctex"]
 
 [params]
 

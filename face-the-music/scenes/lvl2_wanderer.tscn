@@ -1,47 +1,48 @@
-[gd_scene format=3 uid="uid://c8rq26svdnl5a"]
+[gd_scene format=3 uid="uid://ipw2bjwtt4rl"]
 
-[ext_resource type="Script" uid="uid://bw1pojoe8sles" path="res://scripts/wanderer_full.gd" id="1_oxp5l"]
-[ext_resource type="Texture2D" uid="uid://cch61i7tj4rty" path="res://sprites/player/thewanderer_char1-sheet.png" id="2_cecpa"]
+[ext_resource type="Script" uid="uid://d26nbpoqno87r" path="res://scripts/lvl2_wanderer.gd" id="1_e6u4j"]
+[ext_resource type="Texture2D" uid="uid://cch61i7tj4rty" path="res://sprites/player/thewanderer_char1-sheet.png" id="2_fq7mw"]
 
-[sub_resource type="Gradient" id="Gradient_qlg0r"]
-offsets = PackedFloat32Array(0.18028846, 0.70913464)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_t7ghc"]
+offsets = PackedFloat32Array(0, 0.06490385, 0.19951923, 0.36778846)
+colors = PackedColorArray(1, 1, 1, 1, 0.42396313, 0.42396313, 0.42396313, 1, 0.08294934, 0.08294934, 0.08294934, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qlg0r"]
-gradient = SubResource("Gradient_qlg0r")
+gradient = SubResource("Gradient_t7ghc")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+repeat = 1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smehm"]
 radius = 4.0
 height = 13.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6mxy"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7s4y"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ojone"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjb6e"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lccqv"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jf4lf"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ebar7"]
-atlas = ExtResource("2_cecpa")
+atlas = ExtResource("2_fq7mw")
 region = Rect2(0, 192, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lxlsd"]
@@ -78,15 +79,17 @@ scale = Vector2(2, 2)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2093653053]
 modulate = Color(0.5227242, 0.5227243, 0.5227242, 1)
-script = ExtResource("1_oxp5l")
+script = ExtResource("1_e6u4j")
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=1702088246]
 z_index = 4
-energy = 3.33
+energy = 4.02
+blend_mode = 2
 shadow_enabled = true
 shadow_filter = 2
-shadow_filter_smooth = 1.0
+shadow_filter_smooth = 2.0
 texture = SubResource("GradientTexture2D_qlg0r")
+texture_scale = 4.92
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=752054646]
 position = Vector2(2.5, 1)
@@ -101,4 +104,4 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1386157738]
-zoom = Vector2(3, 3)
+zoom = Vector2(6, 6)

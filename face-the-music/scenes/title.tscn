@@ -1,19 +1,137 @@
 [gd_scene format=3 uid="uid://dkdx4l4d7u2sq"]
 
-[node name="Title" type="Control" unique_id=1330186349]
+[ext_resource type="Script" uid="uid://ce1jsvn4t665q" path="res://scripts/title.gd" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://dw0a77ccw0nyt" path="res://sprites/buttons/start_black.png" id="2_b3w7a"]
+[ext_resource type="Texture2D" uid="uid://dbfdm8m5tu8h7" path="res://sprites/buttons/start_white.png" id="3_4rr2b"]
+[ext_resource type="Texture2D" uid="uid://c2mfeeag0hpyy" path="res://sprites/buttons/quit_black.png" id="4_yql1r"]
+[ext_resource type="Texture2D" uid="uid://bnl5nea2ph0bd" path="res://sprites/buttons/quit_white.png" id="5_ia1n6"]
+[ext_resource type="Texture2D" uid="uid://ijqu4t1o2f3f" path="res://sprites/main_menu_bg-sheet.png" id="6_4rr2b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yql1r"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia1n6"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiwto"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 1296, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w65of"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 1944, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygloa"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 2592, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6civk"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 3240, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7af2g"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 3888, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81wt4"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 4536, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcc3o"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 5184, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rcc6"]
+atlas = ExtResource("6_4rr2b")
+region = Rect2(0, 5832, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ah8jo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yql1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia1n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiwto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w65of")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygloa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6civk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7af2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81wt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcc3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rcc6")
+}],
+"loop": true,
+"name": &"main_menu",
+"speed": 5.0
+}]
+
+[node name="Main Menu" type="Control" unique_id=1330186349]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = -2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ignj")
+
+[node name="Button Manager" type="Control" parent="." unique_id=1713226975]
+z_index = 2
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=1638413510]
+[node name="Start" type="TextureButton" parent="Button Manager" unique_id=712985780]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 457.0
+offset_top = 389.0
+offset_right = 629.0
+offset_bottom = 431.0
+texture_normal = ExtResource("2_b3w7a")
+texture_pressed = ExtResource("3_4rr2b")
 
-[node name="Button" type="Button" parent="." unique_id=393313462]
+[node name="Quit" type="TextureButton" parent="Button Manager" unique_id=1080975658]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 457.0
+offset_top = 448.0
+offset_right = 629.0
+offset_bottom = 490.0
+texture_normal = ExtResource("4_yql1r")
+texture_pressed = ExtResource("5_ia1n6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button Manager" unique_id=1318373282]
+modulate = Color(0.8776157, 0.8776158, 0.8776157, 1)
+z_index = -1
+position = Vector2(578, 328)
+sprite_frames = SubResource("SpriteFrames_ah8jo")
+animation = &"main_menu"
+autoplay = "main_menu"
+
+[connection signal="pressed" from="Button Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button Manager/Quit" to="." method="_on_quit_pressed"]

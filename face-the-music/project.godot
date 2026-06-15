@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="Face The Music"
-run/main_scene="uid://dkdx4l4d7u2sq"
+run/main_scene="uid://dsrv0g13tnt3k"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [display]
