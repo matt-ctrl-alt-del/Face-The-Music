@@ -16,6 +16,9 @@ func _physics_process(delta: float) -> void:
 	if input_direction != Vector2.ZERO:
 		velocity = input_direction * SPEED
 		animated_sprite.play("idle")
+	else:
+		velocity = Vector2.ZERO
+		animated_sprite.play("idle")
 		
 
 	move_and_slide()

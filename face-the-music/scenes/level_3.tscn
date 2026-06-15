@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://byfeglen4mb7v" path="res://scenes/notes/lvl3_note2.tscn" id="8_vcx5n"]
 [ext_resource type="PackedScene" uid="uid://b5jbixa6eqhld" path="res://scenes/notes/lvl3_note3.tscn" id="9_56dhn"]
 [ext_resource type="PackedScene" uid="uid://1rpt0ml1jj71" path="res://scenes/notes/lvl3_note4.tscn" id="10_ax3dk"]
+[ext_resource type="PackedScene" uid="uid://bgqxpbbmrkau1" path="res://scenes/mobile_controls.tscn" id="11_56dhn"]
 
 [sub_resource type="Gradient" id="Gradient_fcfvj"]
 offsets = PackedFloat32Array(0, 0.31971154, 0.6706731)
@@ -302,5 +303,7 @@ shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 2.3
 texture = SubResource("GradientTexture2D_wae8j")
+
+[node name="Mobile_Controls" parent="." unique_id=177007620 instance=ExtResource("11_56dhn")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
