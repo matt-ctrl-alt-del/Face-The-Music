@@ -21,3 +21,11 @@ No AI was used in writing the code, making the art, or making the music.
 
 <h3> Acknowledgments: </h3>
 This game is a project for #horizons @Hack Club!
+
+<h3> Screenshots: </h3>
+<img width="347" height="215" alt="nxqZ_5" src="https://github.com/user-attachments/assets/182500f3-4153-4a75-8a12-f8fd297d78b0" />
+<img width="347" height="224" alt="jcVqXS" src="https://github.com/user-attachments/assets/725fd073-fea7-47c5-a7e3-598e7747c8d3" />
+<img width="347" height="259" alt="6LdTlE" src="https://github.com/user-attachments/assets/aac8b2b0-3b33-4886-8706-4619f2537ef2" />
+<img width="347" height="195" alt="BnQRHn" src="https://github.com/user-attachments/assets/2fc88475-23bd-430a-a19e-3dc818489119" />
+<img width="347" height="195" alt="g6hK5t" src="https://github.com/user-attachments/assets/ee57995c-96d6-43d4-9176-08f888484d4a" />
+
