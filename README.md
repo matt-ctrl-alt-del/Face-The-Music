@@ -13,6 +13,10 @@ Feel free to leave comment(s) and rate my game :D I hope you like it.
 <h3> Context: </h3>
 The story is inspired by my own story. Do you have a project waiting for you to pick it up? A long-lost interest in something? Because I have, in fact I have many of ‘em. I used the motif of the Kalimba as the main focal point of the sound design and story because it is also one of those things I have always wanted to do, but have never found a way to learn. It has been collecting dust on my table, just as I kind of forgot to find joy in making things again, like making games. As an immigrant, the Kalimba reminded me both of my past life in my home country and my paused passions and interests. Therefore, I tribute this game to the hopes and dreams of mankind, which are often overlooked and forgotten. I hope this game serves as a reminder that there is beauty in the things we often undermine and disregard.
 
+<h3> Play: </h3>
+It can be played at: 
+https://matt-not-found.itch.io/face-the-music
+
 <h3> Tools: </h3>
 I used Godot and Gdscript, for the art I used Aseprite/Libresprite, then for music I used REAPER. 
 
