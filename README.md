@@ -1,5 +1,5 @@
 <img width="640" height="360" alt="GitHub GIF - Face the Music" src="https://github.com/user-attachments/assets/6efc13f8-95f8-4d21-b336-3c0146dcf2d3" />
----
+<hr>
 
 The story features Jessie, who is haunted by unfortunate experiences. One night, she finds herself in a haunting dream where only music notes provide her with warmth and comfort in her eerie surroundings. Follow Jessie in her journey as she faces the music against unpleasant life memories. The game consists of three levels. The first is a platformer, the second is a maze, and the last is inspired by Pac-Man or Dispatch (the hacking mini-games). 
 
