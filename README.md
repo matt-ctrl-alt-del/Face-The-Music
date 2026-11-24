@@ -17,7 +17,7 @@ I used Godot and Gdscript, for the art I used Aseprite/Libresprite, then for mus
 For the music, I tested the tabs I used in the game with my physical kalimba and then recorded them using a Kalimba simulator. (https://kalimba.live/play-kalimba/21-key-kalimba-virtual-simulator.html) Then I found music online and mixed my kalimba sound file to create the game's soundtrack and sound effects with the software REAPER. I added effects, adjusted frequencies/db, cut unnecessary audio, and used transitions and fade-in/out effects.
 
 <h3> AI Disclosure: </h3>
-No AI was used in writing the code.
+No AI was used in writing the code, making the art, or making the music.
 
 <h3> Acknowledgments: </h3>
 This game is a project for #horizons @Hack Club!
